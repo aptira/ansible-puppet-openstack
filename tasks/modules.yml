@@ -1,0 +1,10 @@
+---
+- name: Install r10k
+  gem: name=r10k state=present include_dependencies=yes user_install=no
+
+- name: Install Puppetfile
+  copy: src=Puppetfile dest=/etc/puppet/Puppetfile
+
+- name: Install modules from Puppetfile
+  shell: r10k puppetfile install --puppetfile /etc/puppet/Puppetfile
+

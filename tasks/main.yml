@@ -1,2 +1,6 @@
 ---
 # defaults
+
+- include: install.yml
+
+- include: modules.yml 

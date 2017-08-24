@@ -1,0 +1,9 @@
+---
+- name: Enable puppet 3.8 repo
+  shell: rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+  ignore_errors: true
+  failed_when: false
+
+- name: Install puppet agent
+  yum: name=puppet state=present
+
