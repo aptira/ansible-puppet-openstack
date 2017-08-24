@@ -1,4 +1,7 @@
 ---
+- name: Install git
+  yum: name=git state=present
+
 - name: Install semantic_puppet
   gem: name=semantic_puppet version=0.1.0 state=present
 
