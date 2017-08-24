@@ -1,4 +1,11 @@
 ---
+- name: Install semantic_puppet
+  gem: name=semantic_puppet version=0.1.0 state=present
+
+# A workaround to the bug https://bugzilla.redhat.com/show_bug.cgi?id=1467286
+- name: Install puppet_forge 2.2.6
+  gem: name=puppet_forge version=2.2.6 state=present
+
 - name: Install r10k
   gem: name=r10k state=present include_dependencies=yes user_install=no
 
