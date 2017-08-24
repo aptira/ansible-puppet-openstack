@@ -5,5 +5,5 @@
   failed_when: false
 
 - name: Install puppet agent
-  yum: name=puppet state=present
+  yum: name=puppet state=latest
 
